@@ -8,6 +8,19 @@ exports = module.exports = {
   algo: function (input) {
     // YOUR CODE BETWEEN HERE
 
+    let poidstotal=0
+    let voyage = 1
+
+    for(i=0; i<input.length; i++){
+    let poidscarton = input[i]
+    poidstotal += poidscarton
+      if (poidstotal > 100){
+        voyage += 1
+        poidstotal = 0
+      }
+    }
+
+    return voyage
     // AND HERE
   },
   verify: function (dataset, output) {
